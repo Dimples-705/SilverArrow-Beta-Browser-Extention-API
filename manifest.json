@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Persistent Cookie Filter Extention - Beta 1.0",
+  "description": "Filters known Supercookie and Persistent cookie scripts and storage.",
+  "version": "1.0",
+  "permissions": [
+    "cookies",
+    "storage",
+    "webRequest",
+    "webRequestFiltering",
+    "<all_urls>",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
